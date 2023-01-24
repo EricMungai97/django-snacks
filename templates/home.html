@@ -6,4 +6,9 @@
 
 {% block content %}
   <h1>This is the Home page</h1>
+     {% for food in snacks %}
+        <h2>{{food.title }}</h2>
+        <img src="{{food.image_url}}" alt="{{food.title}}">
+        <p>Description: {{ food.description }}</p>
+    {% endfor %}
 {% endblock content %}
